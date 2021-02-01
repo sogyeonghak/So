@@ -1,0 +1,15 @@
+a = input()
+b = ['ABC','DEF','GHI','JKL','MNO','PQRS','TUV','WXYZ']
+total = 0
+for i in range(0,len(a)):
+    for j in b:
+         if a[i] in j:
+             total += b.index(j)+3
+
+print(total)
+
+--------------------------
+a, b = input().split()
+a = int(a[::-1]) ##reverse
+b = int(b[::-1]) ##reverse
+print(max(a,b))
