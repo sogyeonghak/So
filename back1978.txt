@@ -1,0 +1,18 @@
+def search(num):
+    if num==1:
+        return False
+    elif num==2:
+        return True
+    for i in range(2,num):
+        if num % i == 0:
+            return False
+    return True
+n = int(input())
+a = list(map(int,input().split()))
+
+count = 0
+for i in a:
+    if search(i):
+        count += 1
+
+print(count)
