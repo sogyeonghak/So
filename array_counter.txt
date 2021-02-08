@@ -1,0 +1,21 @@
+산술평균, 중앙값, 최빈값 ,범위
+
+import sys
+from collections import Counter
+a = int(sys.stdin.readline().rstrip())
+b = []
+for _ in range(a):
+    b.append(int(sys.stdin.readline().rstrip()))
+
+b.sort()
+b_s = Counter(b).most_common()
+print(round(sum(b)/a))
+print(b[a//2])
+if len(b_s) > 1:
+    if b_s[0][1] == b_s[1][1]:
+        print(b_s[1][0])
+    else:
+        print(b_s[0][0])
+else:
+    print(b_s[0][0])
+print(b[a-1] - b[0])
